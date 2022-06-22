@@ -1,0 +1,7 @@
+{
+    "search.exclude": {
+        "build/*": true,
+        "*.woff2": true,
+        "*.ttf": true
+    }
+}
