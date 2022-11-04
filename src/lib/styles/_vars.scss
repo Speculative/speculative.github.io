@@ -1,9 +1,11 @@
 :root {
-	--background: black;
-	--foreground: white;
+	--background: white;
+	--foreground: black;
 	--accent: blue;
 
 	--accentFont: 'Arvo', serif;
 	--baseFont: 'Lato', sans-serif;
 	--codeFont: 'Iosevka SS05 Web', monospace;
+
+	--contentWidth: 800px;
 }
