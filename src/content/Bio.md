@@ -6,13 +6,9 @@ I'm applying for PhD programs for Fall 2023.
 
 I'm interested in researching:
 
-- How **creating interfaces** can be made easier
-- How interfaces can **improve the process of programming**
-- How **non-programmer users** can be empowered to **take advantage of computing**.
+- How creating interfaces can be made easier
+- How interfaces can improve the process of programming
+- How non-programmer users can be empowered to take advantage of computing.
 
 In a past life, I worked as a senior full-stack software engineer at MongoDB and
 Microsoft.
-
-```
-cast :: Spell -> GameState -> GameState
-```

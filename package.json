@@ -39,5 +39,9 @@
 	"lint-staged": {
 		"*.js": "eslint --cache --fix",
 		"*.{js,css,md}": "prettier --write"
+	},
+	"dependencies": {
+		"@fortawesome/free-brands-svg-icons": "^6.2.0",
+		"svelte-fa": "^3.0.3"
 	}
 }

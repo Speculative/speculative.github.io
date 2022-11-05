@@ -23,7 +23,6 @@
 	}
 	main {
 		flex-grow: 1;
-		padding: 2rem 0;
 
 		display: flex;
 		flex-direction: row;
@@ -31,6 +30,7 @@
 	}
 	.wrapper {
 		width: var(--contentWidth);
+		padding: 2rem 1rem;
 		overflow-x: hidden;
 	}
 </style>
