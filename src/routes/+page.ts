@@ -1,4 +1,5 @@
 import type { PageLoad } from './$types';
+
 export const load: PageLoad = async () => {
 	const Bio = (await import('$content/Bio.md')).default;
 	const Publications = (await import('$content/Publications.md')).default;

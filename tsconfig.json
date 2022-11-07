@@ -17,5 +17,5 @@
 			"$components/*": ["src/lib/components/*"],
 			"$content/*": ["src/content/*"]
 		}
-	},
+	}
 }

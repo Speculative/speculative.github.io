@@ -1,7 +1,5 @@
 <script lang="ts">
-	import type { SvelteComponent } from 'svelte';
-
-	export let content: SvelteComponent;
+	export let content: typeof import('*.md');
 </script>
 
 <div class="top">

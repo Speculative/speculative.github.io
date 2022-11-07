@@ -1,9 +1,9 @@
 <script lang="ts">
 	import type { SvelteComponent } from 'svelte';
+	import type { PageData } from './$types';
 	import Content from '$components/Content.svelte';
 
-	/** @type {import('./$types').PageData} */
-	export let data;
+	export let data: PageData;
 </script>
 
 <main>
@@ -21,10 +21,24 @@
 </main>
 
 <style>
-	:global(.headshot) {
-		width: 30%;
-		min-width: 240px;
-		float: right;
+	@media (max-width: 600px) {
+		:global(.headshot) {
+			display: block;
+			width: 30%;
+			min-width: 240px;
+			margin-bottom: 1rem;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	@media (min-width: 600px) {
+		:global(.headshot) {
+			width: 30%;
+			min-width: 240px;
+			margin-left: 1rem;
+			float: right;
+		}
 	}
 
 	section + section {

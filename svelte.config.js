@@ -24,7 +24,10 @@ const config = {
 			pages: 'build',
 			assets: 'build'
 		}),
-		trailingSlash: 'always'
+		trailingSlash: 'always',
+		prerender: {
+			handleHttpError: 'warn'
+		}
 	}
 };
 
