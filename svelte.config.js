@@ -3,6 +3,7 @@ import preprocess from 'svelte-preprocess';
 import { mdsvex } from 'mdsvex';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeSlug from 'rehype-slug';
+import smartypants from 'remark-smartypants';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -15,10 +16,25 @@ const config = {
 		}),
 		mdsvex({
 			extensions: ['.md'],
-			rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings]
+			remarkPlugins: [smartypants],
+			rehypePlugins: [
+				rehypeSlug,
+				[
+					rehypeAutolinkHeadings,
+					{
+						behavior: 'append',
+						properties: {
+							className: ['heading-anchor']
+						},
+						content: {
+							type: 'text',
+							value: '#'
+						}
+					}
+				]
+			]
 		})
 	],
-
 	kit: {
 		adapter: adapter({
 			pages: 'build',

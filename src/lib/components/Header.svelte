@@ -19,6 +19,7 @@
 	}
 
 	h1 a {
+		padding: 0 0.5rem;
 		color: var(--background);
 		text-decoration: none;
 		transition: color 0.2s ease-in-out, background 0.2s ease-in-out;
