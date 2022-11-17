@@ -23,6 +23,7 @@
 	}
 	main {
 		flex-grow: 1;
+		padding: env(safe-area-inset);
 
 		display: flex;
 		flex-direction: row;

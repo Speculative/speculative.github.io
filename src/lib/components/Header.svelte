@@ -1,6 +1,6 @@
 <header>
 	<div class="wrapper">
-		<h1><a href="/">Jeff Tao</a></h1>
+		<a id="name" href="/">Jeff Tao</a>
 		<nav>
 			<a href="/resume">Resume</a>
 			<a href="/posts">Posts</a>
@@ -16,44 +16,30 @@
 		color: var(--background);
 		background: var(--foreground);
 		font-size: 1.5rem;
+		padding: env(safe-area-inset);
 	}
 
-	h1 a {
+	#name {
+		display: flex;
+		align-items: center;
 		padding: 0 0.5rem;
 		color: var(--background);
 		text-decoration: none;
 		transition: color 0.2s ease-in-out, background 0.2s ease-in-out;
+		font-family: var(--accentFont);
+		font-size: 3rem;
 	}
 
-	h1 a:hover {
+	#name:hover {
 		color: var(--accent);
 		background: var(--background);
 	}
 
-	/*
-	h1 a {
-		color: var(--background);
-		text-decoration: none;
-		position: relative;
+	@media (max-width: 400px) {
+		#name {
+			font-size: 2rem;
+		}
 	}
-
-	h1 a::after {
-		content: ' ';
-
-		position: absolute;
-		left: 0;
-		bottom: 0;
-		width: 0;
-
-		border-top: 2px var(--background) solid;
-
-		transition: width 0.2s ease-in-out;
-	}
-
-	h1 a:hover::after {
-		width: 100%;
-	}
-	*/
 
 	.wrapper {
 		display: flex;
