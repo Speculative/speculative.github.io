@@ -12,7 +12,7 @@
 	}
 
 	:global(article h1) {
-		margin-bottom: 1rem;
+		margin-bottom: 0.5rem;
 	}
 
 	:global(.heading-anchor) {
@@ -23,5 +23,45 @@
 
 	:global(h1:hover .heading-anchor, h2:hover .heading-anchor, h3:hover .heading-anchor) {
 		visibility: visible;
+	}
+
+	:global(img) {
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+		max-width: 100%;
+	}
+
+	:global(.footnotes) {
+		margin-top: 1rem;
+	}
+
+	:global(.footnotes a) {
+		text-decoration: none;
+		margin-left: 0.5rem;
+	}
+
+	:global(.footnote-backref) {
+		font-family: 'Noto Color Emoji';
+	}
+
+	@keyframes target {
+		from {
+			background: transparent;
+		}
+		20% {
+			background: var(--accent);
+			color: var(--background);
+		}
+		to {
+			background: transparent;
+			color: inherit;
+		}
+	}
+
+	:global(:target) {
+		animation-name: target;
+		animation-duration: 1s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease-in-out;
 	}
 </style>

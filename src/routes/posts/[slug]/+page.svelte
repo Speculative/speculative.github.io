@@ -24,6 +24,7 @@
 	h1 {
 		display: block;
 		color: var(--accent);
+		font-weight: bold;
 		font-size: 2rem;
 		margin-bottom: 1rem;
 		width: 100%;

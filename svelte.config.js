@@ -4,6 +4,7 @@ import { mdsvex } from 'mdsvex';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeSlug from 'rehype-slug';
 import smartypants from 'remark-smartypants';
+import remarkFootnotes from 'remark-footnotes';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -16,7 +17,7 @@ const config = {
 		}),
 		mdsvex({
 			extensions: ['.md'],
-			remarkPlugins: [smartypants],
+			remarkPlugins: [smartypants, remarkFootnotes],
 			rehypePlugins: [
 				rehypeSlug,
 				[
