@@ -1,4 +1,15 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+
+	onMount(async () => {
+		if (window.location.hash) {
+			const scrollTarget = document.querySelector(window.location.hash);
+			scrollTarget?.scrollIntoView({
+				behavior: 'smooth'
+			});
+		}
+	});
+
 	export let content: typeof import('*.md');
 </script>
 
@@ -7,6 +18,10 @@
 </div>
 
 <style>
+	:global(html) {
+		scroll-behavior: smooth;
+	}
+
 	:global(article h1:not(:first-of-type)) {
 		margin-top: 2rem;
 	}
@@ -35,13 +50,10 @@
 		margin-top: 1rem;
 	}
 
-	:global(.footnotes a) {
-		text-decoration: none;
-		margin-left: 0.5rem;
-	}
-
 	:global(.footnote-backref) {
 		font-family: 'Noto Color Emoji';
+		text-decoration: none;
+		margin-left: 0.5rem;
 	}
 
 	@keyframes target {
@@ -60,8 +72,21 @@
 
 	:global(:target) {
 		animation-name: target;
-		animation-duration: 1s;
+		animation-duration: 1.5s;
 		animation-iteration-count: 1;
 		animation-timing-function: ease-in-out;
+	}
+
+	:global(:target a) {
+		animation-name: target;
+		animation-duration: 1.5s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease-in-out;
+	}
+
+	:global(sup) {
+		vertical-align: top;
+		position: relative;
+		top: -0.4rem;
 	}
 </style>
