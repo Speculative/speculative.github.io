@@ -2,7 +2,7 @@
 	<div class="wrapper">
 		<a id="name" href="/">Jeff Tao</a>
 		<nav>
-			<a href="/resume">Resume</a>
+			<a href="/resume.pdf">Resume</a>
 			<a href="/posts">Posts</a>
 		</nav>
 	</div>
