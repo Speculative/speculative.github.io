@@ -38,12 +38,12 @@ const config = {
 	],
 	kit: {
 		adapter: adapter({
-			pages: 'build',
-			assets: 'build'
+			pages: 'docs',
+			assets: 'docs'
 		}),
 		trailingSlash: 'always',
 		prerender: {
-			handleHttpError: 'warn'
+			handleHttpError: 'fail'
 		}
 	}
 };
