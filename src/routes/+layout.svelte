@@ -7,9 +7,7 @@
 <div class="root">
 	<Header />
 	<main>
-		<div class="wrapper">
-			<slot />
-		</div>
+		<slot />
 	</main>
 	<Footer />
 </div>
@@ -28,10 +26,5 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
-	}
-	.wrapper {
-		width: var(--contentWidth);
-		padding: 2rem 1rem;
-		overflow-x: hidden;
 	}
 </style>
