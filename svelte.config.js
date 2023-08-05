@@ -47,7 +47,7 @@ const config = {
 		trailingSlash: 'always',
 		prerender: {
 			handleHttpError: 'fail',
-			entries: ['*', process.env.VLOG_PATH]
+			entries: ['*', process.env.VLOG_PUBLISH_PATH]
 		}
 	}
 };
