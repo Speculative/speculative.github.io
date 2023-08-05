@@ -3,6 +3,8 @@
 	"version": "0.0.1",
 	"scripts": {
 		"dev": "vite dev --host",
+		"fetch-vlogs": "node scripts/fetch-vlogs.js",
+		"publish-vlogs": "node scripts/set-vlog-path.js",
 		"build": "vite build",
 		"preview": "vite preview --host",
 		"postinstall": "svelte-kit sync && husky install",

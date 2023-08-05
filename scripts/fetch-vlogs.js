@@ -58,4 +58,6 @@ for (let file of dirContents.data.files) {
 	file.thumbnailLink = `/vlog/${file.id}.${ext}`;
 }
 
+console.log('Fetched vlog count:', dirContents.data.files.length);
+
 fs.writeFileSync(JSON_OUT_PATH, JSON.stringify(dirContents.data.files), {});
