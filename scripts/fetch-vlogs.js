@@ -48,7 +48,7 @@ if (fs.existsSync(THUMBNAIL_OUT_PATH)) {
 fs.mkdirSync(THUMBNAIL_OUT_PATH);
 
 for (let file of dirContents.data.files) {
-	console.log('Processing vlog entry:', file.id, file.name, file.thumbnailLink);
+	// console.log('Processing vlog entry:', file.id, file.name, file.thumbnailLink);
 
 	// Newly uploaded files won't have thumbnails yet.
 	// We'll catch them the next time we run.

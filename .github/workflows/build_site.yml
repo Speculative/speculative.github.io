@@ -31,6 +31,10 @@ jobs:
           cache: 'npm'
       - name: Install dependencies
         run: npm ci
+        env:
+          # svelte-kit sync needs this when validating the svelte.config.js
+          # but no actual build happens
+          VLOG_PUBLISH_PATH: ${{ secrets.VLOG_PUBLISH_PATH }}
       - name: Fetch vlog content
         env:
           GOOGLE_CLIENT_EMAIL: ${{ secrets.GOOGLE_CLIENT_EMAIL }}
