@@ -3,7 +3,7 @@
 	import vlogs from '../vlogs.json';
 
 	export let data: PageData;
-	let selectedVlog = vlogs.find((vlog) => vlog.id === data.videoId);
+	$: selectedVlog = vlogs.find((vlog) => vlog.id === data.videoId);
 
 	function stripExtension(name: string) {
 		return name.replace(/\.[^.]+$/, '');
@@ -65,7 +65,9 @@
 
 	#vlog-frame {
 		max-width: 100%;
-		max-height: calc(9 * 100% / 16);
+		/* max-height: calc(9 * 100% / 16); */
+		height: auto;
+		aspect-ratio: 16 / 9;
 		margin-bottom: 1rem;
 	}
 
