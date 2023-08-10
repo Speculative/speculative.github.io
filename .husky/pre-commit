@@ -4,4 +4,3 @@
 ROOT_DIR="$(dirname $0)/.."
 
 npx lint-staged
-npm run build && git add "$ROOT_DIR/docs"
