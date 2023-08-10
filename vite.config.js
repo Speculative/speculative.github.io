@@ -10,6 +10,11 @@ const config = {
 			$components: path.resolve('src/lib/components'),
 			$content: path.resolve('src/content')
 		}
+	},
+	server: {
+		cors: {
+			origin: '*'
+		}
 	}
 };
 

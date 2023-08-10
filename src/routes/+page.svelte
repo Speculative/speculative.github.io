@@ -6,7 +6,7 @@
 	export let data: PageData;
 </script>
 
-<main>
+<div class="normal-content">
 	<section class="bio">
 		<Content content={data.Bio} />
 	</section>
@@ -18,7 +18,7 @@
 		<h2>Projects</h2>
 		<Content content={data.Projects} />
 	</section>
-</main>
+</div>
 
 <style>
 	@media (max-width: 600px) {

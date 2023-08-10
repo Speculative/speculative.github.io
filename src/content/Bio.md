@@ -1,8 +1,9 @@
 <img class="headshot" src="/headshot.jpg" alt="A selfie of me standing in front of a glacier in Kenai Fjords National Park" />
 
-**Hi, I'm Jeff!** I'm currently an MS Thesis student at **Columbia University** where I work on
-**systems to support data visualization interfaces**, advised by Professor
-[Eugene Wu](https://eugenewu.net). I'm applying for PhD programs for Fall 2023.
+**Hi, I'm Jeff!** I'm currently a first year PhD student at the **University of Pennsylvania**.
+
+Previously, I was an MS Thesis student at Columbia University where I worked on systems to support
+data visualization interfaces, advised by Professor [Eugene Wu](https://eugenewu.net).
 
 I'm interested in researching:
 

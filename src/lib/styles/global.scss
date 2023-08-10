@@ -84,3 +84,9 @@ pre,
 code {
 	font-family: var(--codeFont);
 }
+
+.normal-content {
+	width: var(--contentWidth);
+	padding: 2rem 1rem;
+	overflow-x: hidden;
+}

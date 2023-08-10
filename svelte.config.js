@@ -5,6 +5,9 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeSlug from 'rehype-slug';
 import smartypants from 'remark-smartypants';
 import remarkFootnotes from 'remark-footnotes';
+import * as dotenv from 'dotenv';
+
+dotenv.config();
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -38,12 +41,13 @@ const config = {
 	],
 	kit: {
 		adapter: adapter({
-			pages: 'docs',
-			assets: 'docs'
+			pages: 'build',
+			assets: 'build'
 		}),
 		trailingSlash: 'always',
 		prerender: {
-			handleHttpError: 'fail'
+			handleHttpError: 'fail',
+			entries: ['*', process.env.VLOG_PUBLISH_PATH]
 		}
 	}
 };
