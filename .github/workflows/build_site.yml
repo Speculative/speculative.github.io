@@ -47,6 +47,9 @@ jobs:
         run: npm run publish-vlogs
       - name: SvelteKit build
         run: npm run build
+        env:
+          # Now we're really building the site
+          VLOG_PUBLISH_PATH: ${{ secrets.VLOG_PUBLISH_PATH }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
