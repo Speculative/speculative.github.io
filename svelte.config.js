@@ -7,6 +7,8 @@ import smartypants from 'remark-smartypants';
 import remarkFootnotes from 'remark-footnotes';
 import * as dotenv from 'dotenv';
 
+import { REDIRECTS } from './src/routes/redirects.js';
+
 dotenv.config();
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -47,7 +49,7 @@ const config = {
 		trailingSlash: 'always',
 		prerender: {
 			handleHttpError: 'fail',
-			entries: ['*', process.env.VLOG_PUBLISH_PATH]
+			entries: ['*', process.env.VLOG_PUBLISH_PATH, ...Object.keys(REDIRECTS)]
 		}
 	}
 };

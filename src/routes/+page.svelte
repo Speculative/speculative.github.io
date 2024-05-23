@@ -10,6 +10,10 @@
 	<section class="bio">
 		<Content content={data.Bio} />
 	</section>
+	<section class="news">
+		<h2>News</h2>
+		<Content content={data.News} />
+	</section>
 	<section class="publications">
 		<h2>Publications</h2>
 		<Content content={data.Publications} />
