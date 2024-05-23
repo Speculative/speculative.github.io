@@ -2,7 +2,7 @@
 title: Bayesian Query Super-Optimization
 ---
 
-[[Poster PDF]](/posts/nedb_2024_poster.pdf)
+[[Poster PDF]](/downloads/nedb_2024_poster.pdf)
 
 <img src="/posts/nedb_2024_figure.svg" />
 
