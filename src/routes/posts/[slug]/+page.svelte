@@ -15,11 +15,7 @@
 		title="Contents"
 		headingSelector=":is(h1, h2, h3, h4):not(.toc-exclude)"
 		getHeadingTitles={(element) => element?.textContent?.slice(0, -1) ?? 'No title'}
-		keepActiveTocItemInView={false}
 		minItems={2}
-		flashClickedHeadingsFor={0}
-		blurParams={{ duration: 0 }}
-		scrollBehavior="auto"
 		--toc-min-width="400px"
 		--toc-desktop-max-width="400px"
 		--toc-li-color="var(--foreground)"
