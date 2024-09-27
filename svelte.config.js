@@ -46,7 +46,6 @@ const config = {
 			pages: 'build',
 			assets: 'build'
 		}),
-		trailingSlash: 'always',
 		prerender: {
 			handleHttpError: 'fail',
 			entries: ['*', process.env.VLOG_PUBLISH_PATH, ...Object.keys(REDIRECTS)]
