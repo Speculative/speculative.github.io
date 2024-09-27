@@ -40,6 +40,7 @@
 		:global(.headshot) {
 			width: 30%;
 			min-width: 240px;
+			margin-top: 0;
 			margin-left: 1rem;
 			float: right;
 		}

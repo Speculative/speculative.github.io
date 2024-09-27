@@ -28,6 +28,13 @@
 
 	:global(article h1) {
 		margin-bottom: 0.5rem;
+		font-size: 2rem;
+	}
+
+	:global(article h2) {
+		margin-top: 1.5rem;
+		margin-bottom: 0.5rem;
+		font-size: 1.5rem;
 	}
 
 	:global(.heading-anchor) {
