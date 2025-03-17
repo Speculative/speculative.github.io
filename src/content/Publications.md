@@ -1,5 +1,15 @@
 <!-- TODO: Bibtex loader for sveltekit -->
 
+[Learned Offline Query Planning via Bayesian Optimization](#)<br /> _Jeffrey Tao_, Natalie Maus,
+Haydn Jones, Yimeng Zeng, Jacob R. Gardner, Ryan Marcus<br /> SIGMOD 2025
+
+[FreeForm: Flexibly Augmenting Formulas with Synchronized Markup and Graphical Edits](/publications/chi25-freeform.pdf)<br />
+_Jeffrey Tao_, Litao Yan, Jessica Shi, Mia Ginsberg, Andrew Head<br />CHI 2025
+
+[Tyche: Making Sense of Property-Based Testing Effectiveness](https://dl.acm.org/doi/10.1145/3654777.3676407)<br />
+Harrison Goldstein, _Jeffrey Tao_, Zac Hatfield-Dodds, Benjamin C. Pierce, Andrew Head<br />UIST
+2024
+
 [DIG: The Data Interface Grammar](https://dl.acm.org/doi/abs/10.1145/3597465.3605223)<br /> Yiru
 Chen, _Jeffrey Tao_, Eugene Wu<br /> HILDA 2023
 
