@@ -22,7 +22,7 @@
 		scroll-behavior: smooth;
 	}
 
-	:global(article h1:not(:first-of-type)) {
+	:global(article h1) {
 		margin-top: 2rem;
 	}
 

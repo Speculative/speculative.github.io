@@ -1,5 +1,6 @@
 ---
 title: Bayesian Query Super-Optimization
+redirect: /posts/bayesqo
 ---
 
 [[Poster PDF]](/downloads/nedb_2024_poster.pdf)

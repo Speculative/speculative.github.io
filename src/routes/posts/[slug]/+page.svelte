@@ -13,7 +13,7 @@
 	{#await import(`../../../content/posts/${data.moduleName}.md`)}
 		Loading...
 	{:then post}
-		<h1>{post.metadata.title}</h1>
+		<h1 class="title">{post.metadata.title}</h1>
 		<Content content={post.default} />
 	{:catch error}
 		Failed to load post! {error.message}
@@ -21,11 +21,12 @@
 </article>
 
 <style>
-	h1 {
+	.title {
 		display: block;
 		color: var(--accent);
 		font-weight: bold;
 		font-size: 2rem;
+		margin-top: 0;
 		margin-bottom: 1rem;
 		width: 100%;
 		border-bottom: 2px solid var(--accent);
