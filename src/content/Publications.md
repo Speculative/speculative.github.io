@@ -1,11 +1,12 @@
 <!-- TODO: Bibtex loader for sveltekit -->
 
-[Learned Offline Query Planning via Bayesian Optimization](#)<br /> _Jeffrey Tao_, Natalie Maus,
-Haydn Jones, Yimeng Zeng, Jacob R. Gardner, Ryan Marcus<br /> SIGMOD 2025
+[Learned Offline Query Planning via Bayesian Optimization](/publications/sigmod25-bayesqo.pdf)<br />
+_Jeffrey Tao_, Natalie Maus, Haydn Jones, Yimeng Zeng, Jacob R. Gardner, Ryan Marcus<br /> SIGMOD
+2025
 
-[Physical Visualization Design: Decoupling Interface and System Design](#)<br /> Yiru Chen, Xupeng
-Li, _Jeffrey Tao_, Lana Ramjit, Ravi Netravali, Subrata Mitra, Aditya Parameswaran, Javad Ghaderi,
-Dan Rubenstein, Eugene Wu<br /> SIGMOD 2025
+[Physical Visualization Design: Decoupling Interface and System Design](https://dl.acm.org/doi/10.1145/3725334)<br />
+Yiru Chen, Xupeng Li, _Jeffrey Tao_, Lana Ramjit, Ravi Netravali, Subrata Mitra, Aditya
+Parameswaran, Javad Ghaderi, Dan Rubenstein, Eugene Wu<br /> SIGMOD 2025
 
 [FreeForm: Flexibly Augmenting Formulas with Synchronized Markup and Graphical Edits](/publications/chi25-freeform.pdf)<br />
 _Jeffrey Tao_, Litao Yan, Jessica Shi, Mia Ginsberg, Andrew Head<br />CHI 2025

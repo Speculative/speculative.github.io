@@ -5,7 +5,7 @@ title: Learned Offline Query Planning via Bayesian Optimization
 _Jeffrey Tao_, Natalie Maus, Haydn Jones, Yimeng Zeng, Jacob R. Gardner, Ryan Marcus<br />SIGMOD
 2025
 
-[[PDF](/publications/sigmod25-bayesqo.pdf)]
+[[PDF](/publications/sigmod25-bayesqo.pdf)][[Code](https://github.com/Speculative/BayesQO)]
 
 # Abstract
 
