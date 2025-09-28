@@ -1,5 +1,8 @@
 <!-- TODO: Bibtex loader for sveltekit -->
 
+[Answering Developer Questions with Annotated Agent-Discovered Program Traces](https://dl.acm.org/doi/10.1145/3746059.3747652)<br />
+Litao Yan, _Jeffrey Tao_, Lydia B. Chilton, Andrew Head<br /> UIST 2025
+
 [Learned Offline Query Planning via Bayesian Optimization](/publications/sigmod25-bayesqo.pdf)<br />
 _Jeffrey Tao_, Natalie Maus, Haydn Jones, Yimeng Zeng, Jacob R. Gardner, Ryan Marcus<br /> SIGMOD
 2025
