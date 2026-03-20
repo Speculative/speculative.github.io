@@ -1,6 +1,6 @@
 <img class="headshot" src="/headshot.jpg" alt="A selfie of me in a courtyard at Penn" />
 
-**Hi, I'm Jeff!** I'm currently a second-year PhD student at the **University of Pennsylvania**
+**Hi, I'm Jeff!** I'm currently a third-year PhD student at the **University of Pennsylvania**
 where I'm advised by Professors [Andrew Head](https://andrewhead.info/) and
 [Ryan Marcus](https://rmarcus.info/).
 

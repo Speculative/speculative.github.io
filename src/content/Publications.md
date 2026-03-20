@@ -1,4 +1,7 @@
 <!-- TODO: Bibtex loader for sveltekit -->
+[Scaling Multi-Task Bayesian Optimization with Large Language Models](https://openreview.net/forum?id=ekmUkRYnkN)<br />
+Yimeng Zeng, Natalie Maus, Haydn Thomas Jones, _Jeffrey Tao_, Fangping Wan, Marcelo Der Torossian Torres, Cesar de la Fuente-Nunez, Ryan Marcus, Osbert Bastani, Jacob R. Gardner<br />
+ICLR 2026
 
 [Answering Developer Questions with Annotated Agent-Discovered Program Traces](https://dl.acm.org/doi/10.1145/3746059.3747652)<br />
 Litao Yan, _Jeffrey Tao_, Lydia B. Chilton, Andrew Head<br /> UIST 2025
