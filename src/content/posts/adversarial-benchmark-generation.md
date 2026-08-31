@@ -6,6 +6,7 @@ _Jeffrey Tao_, Yimeng Zeng, Natalie Maus, Haydn Jones, Jacob R. Gardner, Ryan Ma
 VLDB 2026<br />_Honorable Mention_
 
 [[PDF](/publications/aidb26-adversarial-queries.pdf)]
+[[Code](https://github.com/Speculative/adversarial-queries)]
 
 # Abstract
 
