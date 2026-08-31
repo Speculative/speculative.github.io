@@ -1,8 +1,8 @@
 <img class="headshot" src="/headshot.jpg" alt="A selfie of me in a courtyard at Penn" />
 
-**Hi, I'm Jeff!** I'm currently a third-year PhD student at the **University of Pennsylvania**
-where I'm advised by Professors [Andrew Head](https://andrewhead.info/) and
-[Ryan Marcus](https://rmarcus.info/).
+**Hi, I'm Jeff!** I'm currently a fourth-year PhD student at the **University of Pennsylvania**
+where I work on tools to help programmers debug their code, advised by Professors
+[Andrew Head](https://andrewhead.info/) and [Ryan Marcus](https://rmarcus.info/).
 
 Previously, I was an MS Thesis student at Columbia University where I worked on systems to support
 data visualization interfaces, advised by Professor [Eugene Wu](https://eugenewu.net).
