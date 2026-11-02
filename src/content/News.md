@@ -1,3 +1,5 @@
+- [2026.11\] I'm at UIST 2026 presenting
+  [Data-Oriented Debugging Across Place and Time](/posts/data-oriented-debugging)
 - [2026.08\] I'm at VLDB 2026 presenting
   [Adversarial Query Generation](/posts/adversarial-benchmark-generation)
 - [2026.07\] [Data-Oriented Debugging Across Place and Time](#) was accepted to UIST 2026!

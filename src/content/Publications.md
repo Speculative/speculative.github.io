@@ -1,5 +1,8 @@
 <!-- TODO: Bibtex loader for sveltekit -->
 
+[Data-Oriented Debugging Across Place and Time](/publications/uist26-data-oriented-debugging.pdf)<br />
+_Jeffrey Tao_, Xiaorui Liu, Ryan Marcus, Andrew Head<br /> UIST 2026
+
 [Adversarial Query Generation via Bayesian Optimization](/publications/aidb26-adversarial-queries.pdf)<br />
 _Jeffrey Tao_, Yimeng Zeng, Natalie Maus, Haydn Jones, Osbert Bastani, Jacob R. Gardner, Ryan
 Marcus<br /> AIDB @ VLDB 2026<br /> _Honorable Mention_
