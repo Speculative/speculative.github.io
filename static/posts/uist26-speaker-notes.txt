@@ -1,0 +1,337 @@
+UIST 2026
+
+---
+
+Slide 1 — Data-oriented Debugging with autopsy
+
+Hello! I'm Jeff, a PhD student at Penn, and today I'm excited to tell you about Data-Oriented Debugging Across Place and Time, which is an analytical lens for thinking about the fundamentals of debugging and debugging tools
+
+---
+
+Slide 2
+
+Step 1
+
+I'd like to start with a mystery. Think back a year or two ago, when most of you were still writing and debugging code by hand.
+
+Do you use print debugging? I'm willing to bet that even amongst people who research novel interfaces, a good number of you use print debugging. I certainly do.
+
+Step 2
+
+What about breakpoint debugging? Some of you almost certainly feel that a breakpoint debugger confers great advantages by being interactive.
+
+Step 3
+
+Have you ever wondered why you prefer the debugger that you do?
+I'd like to show you a conceptual lens for thinking about what a particular debugger does for you and why you might prefer different tools in different situations.
+
+---
+
+Slide 3
+
+We call this lens Data-Oriented Debugging.
+
+---
+
+Slide 4
+
+Step 1
+
+I'd like to preface this talk by saying this is not your usual UIST talk with a system and an evaluation, and is instead more conceptual. 
+
+Step 2
+
+I'll introduce this Data-Oriented Debugging conceptual lens, use it to give an interpretation of debugging behaviors that we've observed in some studies, and paint a picture of a possible future for debugging tools.
+
+
+Step 3
+
+Also, this paper does not address programming and debugging with AI, but if you're interested at the end, I've got some thoughts about it that I'd be happy to share!
+
+---
+
+Slide 5 — Example — evaluate
+
+Step 1
+
+I'll introduce Data-Oriented Debugging by way of this example. This is the expression evaluator from a basic arithmetic calculator program.
+
+Step 2
+
+This calculator has a problem: when you put in 2 + 3 * 4^2, you get 26. For reference, if you're following order of operations, you should get 50.
+
+Step 3
+
+So you might think to yourself, "I wonder if the order of operations is incorrect".
+
+Step 4
+
+You can get at that by adding a print statement to see each operator as it's executed.
+
+Step 5
+
+And when you do this, you can see that the operations do actually print out in the order that you expect, which is exponentiation, then multiplication, then addition
+
+Step 6
+
+Which allows you to conclude that the problem is not with the order of operations
+
+Next, I'll introduce the Data-Oriented Debugging lens. This isn't the only possible way to view debugging, but as we'll see, this one has some useful properties.
+
+Step 7
+
+In Data-Oriented Debuggging, when you suspect that the order of operations is wrong, you aren't able to tell whether this suspicion is true from looking at the code. We say you have a "Data Need" -- something that is answered by examining features of how the code really executes.
+
+Step 8
+
+You fulfill this data need by issuing a query using your debugging tool. Here, that's adding a print line
+
+Step 9
+
+You interpret the output that your debugging tool gives in response to your query, which is the terminal output here
+
+Step 10
+
+And by interpreting this output, you update your mental model of the program
+
+Step 11
+
+If you're making a debugging tool, the thing I want you to take away from this talk is that you should think about what data needs your tool supports, and how queries are posed to it
+
+---
+
+Slide 6 — Place & Time — Calculator
+
+Step 1
+
+If we think of debugging as querying a program's execution, then it's helpful to have a way to talk about the structure of execution data.
+
+We visualize this using the orthogonal axes of Place and Time
+
+Place refers to all of the locations in the code and the variables contained there. You can kind of imagine lines of source code  mapping to vertical positions.
+
+Time, as you might expect, refers to the progression of execution, with things that happen later in execution appearing rightwards on the axis.
+
+---
+
+Slide 7 — Place & Time — Print debugging
+
+Step 1
+
+We can use the Place-Time chart to understand what different debugging tools are doing for us.
+
+After I add a print statement to my code, when that line of code executes, it prints the expressions that I queried for.
+
+This happens every time the print statement executes, and the fact that it does is what makes print debugging so useful. I log a particular Place in the code, and the query that I'm expressing is "show me this place across all time".
+
+---
+
+Slide 8 — Place & Time — Breakpoint debugging
+
+Step 1
+
+A breakpoint basically gives me a query across the other axis: when I'm paused on a breakpoint, I can see across all currently relevant places at this particular moment in time.
+
+When I advance the debugger by stepping, I'm getting a different slice of all places at the new point in time. So the value in breakpoints is that I have quick, interactive access across places.
+
+---
+
+Slide 9 — Place & Time — Debugging tools
+
+Step 1
+
+So this helps resolve the mystery I posed at the beginning: these two tools let me query execution in different ways. Print debugging lets me easily see a particular place across time.
+
+Step 2
+
+While breakpoint debugging lets me see across Place at a particular point in time.
+
+Step 3
+
+We can extend this analysis to other debugging tools, which is what makes this lens so useful. This is the Whyline, by Amy Ko. It analyzes a program's execution and gives us this interface where we can look at things that happen in the program and follow these "why" links to navigate backwards in time to the causes of events.
+
+Step 4
+
+This provides a different type of debugging, one which links points in place-time by their causal relationships, which I've illustrated using these arrows between points.
+
+Step 5
+
+But also notice all of the queries that it doesn't support. Research debugging interfaces have usually not been as general as print and breakpoints.
+
+Step 6
+
+So we imagine some future tool could try to combine all of these.
+
+---
+
+Slide 10
+
+On to things that we learned from applying Data-Oriented Debugging to understand debugging behavior.
+
+---
+
+Slide 11
+
+We did two studies, first a set of interviews with 12 experienced industry programmers where we asked them about their debugging process, then a study where we had 19 participants use different debugging tools to solve two debugging tasks and qualitatively compared how they used them.
+
+---
+
+Slide 12 — Types of Queries — Across Time
+
+First, the basic types of queries that we saw participants issuing in that lab study.
+
+We saw all of the basic queries that these place-time axes imply, which we think validates the applicability of the Data-Oriented Debugging lens
+
+So we saw queries across time
+
+---
+
+Slide 13 — Types of Queries — Across Place
+
+Queries across place
+
+---
+
+Slide 14 — Types of Queries — A Point in Place and Time
+
+and these point queries for things that only happened one time.
+
+---
+
+Slide 15 — Types of Queries — Across Place and Time
+
+The most complex type of query was these complex views of multiple places and times. These helped participants see patterns.
+
+An example was in a web processing pipeline when one participant realized a particular line executes a variable number of times per request, which was an important step towards them discovering that a certain processing layer had a problem.
+
+---
+
+Slide 16 — Transformations
+
+Step 1
+
+Participants didn't just issue one query. We saw them issue multiple queries over the course of a session, oftentimes modifying their existing queries. We call these transformations or movements in place-time.
+
+Step 2
+
+The most common one by far was widening across place. This looks something like adding new variables to a print statement. Doing this gives more context for the current line of investigation.
+
+Step 3
+
+Again, if you're working on a debugging tool, you should think about how it supports transformations. What does the interaction look like?
+
+Step 4
+
+There was another common transformation: narrowing in time. For print, this looks like wrapping your print line in a condition. I think it's interesting that participants did this, because it's technically strictly less information, and I think it speaks to there being a cost to having too much stuff to look at.
+
+---
+
+Slide 17
+
+Step 1
+
+Narrowing in time corroborates something we saw in our formative interviews: industry software engineers engaged in what we call Pre-Filtering, 
+
+Step 2
+
+where they intentionally did not query for information that they thought could be useful, because they were afraid of producing more output than they could handle. They intentionally restricted their queries.
+
+Step 3
+
+For example, a print user said "there will be a lot of statements, right? it looks like too much information for me to look at and process and get an output".
+
+This, to me, smells like a limitation of the tools. For fear of flooding the terminal with too much output, programmers intentionally query for less. Isn't that wrong? Because the tool can't help them, they intentionally inhibit their own comprehension process.
+
+---
+
+Slide 18
+
+Lastly, I want to give a vision of a possible future debugger.
+
+---
+
+Slide 19
+
+Remember that future debugging tool that combines the querying capabilities of multiple debuggers?
+
+---
+
+Slide 20 — autopsy — Assemble a debugging view
+
+Step 1
+
+Imagine a tool that captures the full execution trace, including the value of every variable at every step of execution, then assembling the debugging view we need directly from the code.
+
+Step 2
+
+I can pick a place from the code and use direct manipulation to assemble a debugging view of it. I drag node.op into a table
+
+Step 3
+
+I get a row for that expression at each invocation of this code. So far, this is a query across time for the operator symbols
+
+Step 4
+
+Since I've got a full execution trace, I can get details on demand for one of these invocations by clicking on it. This gives me a query across time at the time this particular operator was being evaluated.
+
+Step 5
+
+I can see variables like left, right, and result that might be useful
+
+Step 6
+
+So I select and drag them into the interactive debugging view
+
+Step 7
+
+And now I have a more complex view across place and time that makes it easier to make comparisons
+
+---
+
+Slide 21
+
+This was Data-Oriented Debugging Across Place and Time. We've got a lot more interesting details and analysis that couldn't fit in this talk, so please check out our paper!
+
+---
+
+Slide 22
+
+(No speaker notes.)
+
+---
+
+Slide 23
+
+(No speaker notes.)
+
+---
+
+Slide 24 — autopsy — Across Place & Time
+
+Step 1
+
+I think that Data-Oriented Debugging points towards a tool that makes it easy to express many different types of queries with the same tool, since we saw in our study that programmers issue multiple different query shapes in a single debugging session. I've been working on a tool like this that I call "autopsy"
+
+Step 2
+
+Using autopsy initially looks like using print debugging. You add these log calls to your code
+
+Step 3
+
+When a particular log call executes, it logs the expression you gave it. But it also takes a snapshot that gives you a view across all place at the time of the log
+
+Step 4
+
+This means if you wanted to, say, also see the values of left and right at this time, you can do that by interacting with the log output
+
+Step 5
+
+And since log otherwise behaves like a normal print line, we can do this across time
+
+Step 6
+
+Also, we capture these snapshots as actual data and not strings, which means we can compute further information from them
+
+Step 7
+
+A simple example is you could compute summary statistics about a numeric variable
